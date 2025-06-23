@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Stock Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Indian Stock Planner & Predictor</h1>
+  </header>
+
+  <main>
+    <section id="auth-section">
+      <h2>User Login / Register</h2>
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="registerUser()">Register</button>
+      <button onclick="loginUser()">Login</button>
+      <p id="authStatus"></p>
+    </section>
+
+    <section id="search-section">
+      <h2>Stock Lookup</h2>
+      <input type="text" id="ticker" placeholder="e.g. RELIANCE.NS">
+      <button onclick="getStockData()">Search</button>
+    </section>
+
+    <section id="stock-info">
+      <h2>Stock Details</h2>
+      <div id="details"></div>
+      <canvas id="stockChart"></canvas>
+    </section>
+
+    <section id="prediction">
+      <h2>Prediction (Next 30 Days)</h2>
+      <div id="predictedData"></div>
+    </section>
+
+    <section id="analysis">
+      <h2>Analysis & Indicators</h2>
+      <div id="analysisResults"></div>
+    </section>
+
+    <section id="ai-guide">
+      <h2>AI Investment Guide</h2>
+      <div id="aiAdvice"></div>
+    </section>
+
+    <section id="save-investment">
+      <h2>Save Investment with Note</h2>
+      <input type="text" id="investTicker" placeholder="Stock Ticker">
+      <textarea id="note" placeholder="Why you invested..."></textarea>
+      <button onclick="saveInvestment()">Save Investment</button>
+    </section>
+
+    <section id="user-history">
+      <h2>Your Investment History</h2>
+      <button onclick="loadUserData()">Load My Data</button>
+      <div id="userData"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>

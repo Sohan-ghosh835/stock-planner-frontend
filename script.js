@@ -1,3 +1,6 @@
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const authStatus = document.getElementById('authStatus');
 let userId = "";
 
 async function registerUser() {
@@ -51,7 +54,7 @@ async function getStockData() {
   analysisResults.innerHTML = `<p>SMA(10): ₹${a.sma10.toFixed(2)}</p><p>RSI: ${a.rsi.toFixed(2)}</p><p>Volatility: ${a.volatility.toFixed(2)}</p>`;
 
   const aiRes = await fetch(`https://stock-backend-da89.onrender.com/ai-guide/${ticker}`);
-  const ai = await res.json();
+  const ai = await aiRes.json();
   aiAdvice.textContent = ai.message;
 }
 
